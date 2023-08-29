@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:css": "stylelint src/**/*.{js,jsx}",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@linaria/stylelint-config-standard-linaria": "^4.5.1",
     "@linaria/vite": "^4.5.4",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
@@ -25,6 +27,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "stylelint": "^14.16.1",
     "vite": "^4.4.5"
   }
 }
