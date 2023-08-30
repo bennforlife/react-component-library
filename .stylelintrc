@@ -1,3 +1,6 @@
 {
-  "extends": ["@linaria/stylelint-config-standard-linaria"]
+  "extends": [
+    "@linaria/stylelint-config-standard-linaria",
+    "stylelint-config-prettier"
+  ]
 }
