@@ -14,11 +14,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.0.8",
     "@linaria/babel-preset": "^4.5.4",
     "@linaria/core": "^4.5.4",
     "@linaria/react": "^4.5.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "reset-css": "^5.0.2"
   },
   "devDependencies": {
     "@linaria/stylelint-config-standard-linaria": "^4.5.1",
