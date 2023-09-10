@@ -13,7 +13,7 @@ const StyledText = styled(Text)`
   display: inline-block;
   font-weight: 500;
   padding: 0.375em 0.75em;
-  margin: 1em 1em 0;
+  margin: 0 1em 0 0;
   border-radius: ${({ variant }) => (variant === 'pill' ? '1em' : '.25em')};
   color: ${({ color = 'gray' }) => colors[color][800]};
   background-color: ${({ color = 'gray' }) => colors[color][100]};
