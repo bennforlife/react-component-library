@@ -17,6 +17,7 @@ export const globals = css`
 
     :root {
       font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      margin: 0 1rem;
     }
   }
 `
