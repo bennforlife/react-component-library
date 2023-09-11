@@ -1,11 +1,18 @@
 import { styled } from '@linaria/react'
 import Badge from './components/Badge/Badge'
 import Banner from './components/Banner'
+import Card from './components/Card'
+import { HiOutlineCloudUpload } from 'react-icons/hi'
 
 const H1 = styled.h1`
   font-size: 2rem;
   font-weight: 500;
   margin: 1em 0 0.5em;
+`
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2.875em;
 `
 
 function App() {
@@ -44,6 +51,34 @@ function App() {
           <Banner.Header as="h2">Error banner</Banner.Header>
           <Banner.Body>There was an error processing your request</Banner.Body>
         </Banner>
+      </section>
+      <section>
+        <H1>Cards</H1>
+        <Grid>
+          <Card>
+            <Card.Header as="h2">Easy Deployment</Card.Header>
+            <Card.Body>
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+              magna sit morbi lobortis.
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Icon icon={<HiOutlineCloudUpload />}></Card.Icon>
+            <Card.Header as="h2">Easy Deployment</Card.Header>
+            <Card.Body>
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+              magna sit morbi lobortis.
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Icon />
+            <Card.Header as="h2">Easy Deployment</Card.Header>
+            <Card.Body>
+              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
+              magna sit morbi lobortis.
+            </Card.Body>
+          </Card>
+        </Grid>
       </section>
     </>
   )
