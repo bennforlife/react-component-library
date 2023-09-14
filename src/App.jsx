@@ -3,6 +3,11 @@ import Badge from './components/Badge/Badge'
 import Banner from './components/Banner'
 import Card from './components/Card'
 import { HiOutlineCloudUpload } from 'react-icons/hi'
+import logo from './assets/logo.svg'
+import profilePhoto from './assets/profile-photo.jpg'
+import { screens } from './global.styles'
+import TestimonialWithImage from './components/NewTestimonial/TestimonialWithImage'
+import TestimonialWithoutImage from './components/NewTestimonial/TestimonialWithoutImage'
 
 const H1 = styled.h1`
   font-size: 2rem;
@@ -11,9 +16,25 @@ const H1 = styled.h1`
 `
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, auto);
   gap: 2.875em;
+
+  @media (min-width: ${screens.md}) {
+    grid-template-columns: repeat(3, auto);
+  }
 `
+
+const data = {
+  testimonial: {
+    photoSrc: profilePhoto,
+    photoAlt: 'Photo of May Andersons',
+    logoSrc: logo,
+    logoAlt: 'Workcation logo',
+    quote:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.',
+    name: 'May Andersons',
+    position: 'Workcation, CTO',
+  },
+}
 
 function App() {
   return (
@@ -79,6 +100,23 @@ function App() {
             </Card.Body>
           </Card>
         </Grid>
+      </section>
+      <section>
+        <H1>Testimonial</H1>
+        <TestimonialWithImage
+          photoSrc={data.testimonial.photoSrc}
+          photoAlt={data.testimonial.photoAlt}
+          quote={data.testimonial.quote}
+          name={data.testimonial.name}
+          position={data.testimonial.position}
+        />
+        <TestimonialWithoutImage
+          logoSrc={data.testimonial.logoSrc}
+          logoAlt={data.testimonial.logoAlt}
+          quote={data.testimonial.quote}
+          name={data.testimonial.name}
+          position={data.testimonial.position}
+        />
       </section>
     </>
   )
